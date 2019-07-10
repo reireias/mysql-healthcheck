@@ -23,7 +23,7 @@ func main() {
 	flag.Parse()
 	db, err := sql.Open("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", *user, *password, *host, *port, *database))
 	if err != nil {
-		fmt.Printf("Error opening database: %v", err)
+		fmt.Printf("Error opening database: %v\n", err)
 	}
 
 	// simple query exec handler
